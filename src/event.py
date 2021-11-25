@@ -19,3 +19,8 @@ class Event:
     def add_customer(self, customer):
         self.customer_list.append(customer)
     
+    def book_performer(self, performer, amount):
+        performer.increase_earnings(amount)
+        self.adjust_revenue(-amount)
+        self.add_performer(performer)
+    

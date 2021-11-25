@@ -11,6 +11,7 @@ class TestEvent(unittest.TestCase):
         self.customer2 = Customer("Paul", 60, "Mily Cyrus")
         self.performer1 = Performer("Drake")
         self.performer2 =  Performer("AC/DC")
+        self.new_performer = Performer("Rihanna")
         self.event.customer_list = [self.customer1, self.customer2]
         self.event.performer_list = [self.performer1, self.performer2]
 
@@ -25,12 +26,18 @@ class TestEvent(unittest.TestCase):
         self.assertEqual(2, self.event.performer_count())
 
     def test_add_performer(self):
-        new_performer = Performer("Rihanna")
-        self.event.add_performer(new_performer)
+        self.event.add_performer(self.new_performer)
         self.assertEqual(3, self.event.performer_count())
     
     def test_add_customer(self):
         new_customer = Customer("James", 50, "Coldplay")
         self.event.add_customer(new_customer)
         self.assertEqual(3, len(self.event.customer_list))
+    
+    def test_book_performer(self):
+        self.event.book_performer(self.new_performer, 5000)
+        self.assertEqual(3, self.event.performer_count())
+        self.assertEqual(-5000, self.event.revenue)
+        self.assertEqual(5000, self.new_performer.earnings)
+
     
