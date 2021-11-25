@@ -8,3 +8,4 @@ class TestPerformer(unittest.TestCase):
     
     def test_get_performer_name(self):
         self.assertAlmostEqual("Drake", self.performer.name)
+    
