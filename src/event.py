@@ -9,8 +9,11 @@ class Event:
     
     def adjust_revenue(self, amount):
         self.revenue += amount
-        
+
     def performer_count(self):
         return len(self.performer_list)
+    
+    def add_performer(self, performer):
+        self.performer_list.append(performer)
 
     

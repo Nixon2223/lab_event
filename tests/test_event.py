@@ -24,7 +24,7 @@ class TestEvent(unittest.TestCase):
     def test_check_length_performer_list(self):
         self.assertEqual(2, self.event.performer_count())
 
-    # def test_add_performer(self):
-    #     new_performer = Performer("Rihanna")
-    #     self.event.add_performer()
-    #     self.asserEqual()
+    def test_add_performer(self):
+        new_performer = Performer("Rihanna")
+        self.event.add_performer(new_performer)
+        self.assertEqual(3, self.event.performer_count())
