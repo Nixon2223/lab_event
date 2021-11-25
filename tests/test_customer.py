@@ -12,3 +12,9 @@ class TestCustomer(unittest.TestCase):
     def test_decrease_wallet(self):
         self.customer.decrease_wallet(10)
         self.assertEqual(90, self.customer.wallet)
+    
+    def test_can_afford__True(self):
+        self.assertEqual(True, self.customer.can_afford(55))
+    
+    def test_can_afford__False(self):
+        self.assertEqual(False, self.customer.can_afford(200))

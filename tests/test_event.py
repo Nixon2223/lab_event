@@ -33,3 +33,4 @@ class TestEvent(unittest.TestCase):
         new_customer = Customer("James", 50, "Coldplay")
         self.event.add_customer(new_customer)
         self.assertEqual(3, len(self.event.customer_list))
+    

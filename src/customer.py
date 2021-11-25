@@ -7,3 +7,6 @@ class Customer:
     
     def decrease_wallet(self, amount):
         self.wallet -= amount
+    
+    def can_afford(self, amount):
+        return self.wallet >= amount
