@@ -28,3 +28,8 @@ class TestEvent(unittest.TestCase):
         new_performer = Performer("Rihanna")
         self.event.add_performer(new_performer)
         self.assertEqual(3, self.event.performer_count())
+    
+    def test_add_customer(self):
+        new_customer = Customer("James", 50, "Coldplay")
+        self.event.add_customer(new_customer)
+        self.assertEqual(3, len(self.event.customer_list))

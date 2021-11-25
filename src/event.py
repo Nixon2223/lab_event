@@ -16,4 +16,6 @@ class Event:
     def add_performer(self, performer):
         self.performer_list.append(performer)
 
+    def add_customer(self, customer):
+        self.customer_list.append(customer)
     
