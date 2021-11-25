@@ -10,3 +10,6 @@ class Customer:
     
     def can_afford(self, amount):
         return self.wallet >= amount
+    
+    def buy_ticket(self, event):
+        if self.can_afford(event.ticket_price):
