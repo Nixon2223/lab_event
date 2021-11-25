@@ -6,5 +6,8 @@ class Event:
         self.revenue = 0
         self.performer_list = []
         self.customer_list = []
+    
+    def increase_revenue(self):
+        self.revenue += self.ticket_price
 
     
