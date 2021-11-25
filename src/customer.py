@@ -4,3 +4,6 @@ class Customer:
         self.name = name
         self.wallet = wallet
         self.favourite_performer = favourite_performer
+    
+    def decrease_wallet(self, amount):
+        self.wallet -= amount
