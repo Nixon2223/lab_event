@@ -17,7 +17,7 @@ class TestEvent(unittest.TestCase):
     def test_get_ticket_price(self):
         self.assertEqual(55, self.event.ticket_price)
 
-    def test_increase_revenue(self):
-        self.event.increase_revenue()
+    def test_adjust_revenue(self):
+        self.event.adjust_revenue(self.event.ticket_price)
         self.assertEqual(55, self.event.revenue)
 
