@@ -21,3 +21,10 @@ class TestEvent(unittest.TestCase):
         self.event.adjust_revenue(self.event.ticket_price)
         self.assertEqual(55, self.event.revenue)
 
+    def test_check_length_performer_list(self):
+        self.assertEqual(2, self.event.performer_count())
+
+    # def test_add_performer(self):
+    #     new_performer = Performer("Rihanna")
+    #     self.event.add_performer()
+    #     self.asserEqual()
